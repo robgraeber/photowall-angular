@@ -1,4 +1,4 @@
 node_modules/
-js/
+lib/
 .DS_STORE
 build/.module-cache/
