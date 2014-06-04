@@ -1,0 +1,22 @@
+{
+  "name": "Photowall-angular",
+  "version": "0.0.0",
+  "authors": [
+    "Rob Graeber <bgraeber@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "/js/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.16",
+    "angular-route": "~1.2.16",
+    "jquery": "~2.1.1",
+    "greensock": "~1.11.8"
+  }
+}

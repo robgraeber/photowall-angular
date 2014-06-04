@@ -1,0 +1,16 @@
+body{
+  /*background-color: blue;*/
+}
+.photos{
+    width: 1212px;
+    margin: auto;
+}
+.photoImg{
+  display: inline-block;
+  width:200px;
+  height:200px;
+  padding: 1px;
+  margin: auto;
+}
+.outer { position: relative; left: 50%; float: left; }
+.inner { position: relative; left: -50%; float: left; }
