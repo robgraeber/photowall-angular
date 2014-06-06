@@ -2,15 +2,15 @@ var photoWall = angular.module('photoWall', []);
 
 photoWall.directive("photoWall", function(){
   var template = '<div class="photos">'+
-                   '<img fx-enter hide-on-err ng-repeat="item in photoItems" class="photoImg" ng-src="{{item.medium_url}}" />'+
+                   '<img pw-fx-enter pw-hide-on-err ng-repeat="item in photoItems" class="photoImg" ng-src="{{item.medium_url}}" />'+
                  '</div>';
   return {
     restrict: 'E',
     template: template,
     scope: {
         photoDataStr: '@photoData',
-    },
-    controller:function($scope, $window){
+    },  
+    controller:function($scope){
       $scope.photoData = eval($scope.photoDataStr);
       $scope.photoItems = $scope.photoData.slice(0,60);
 
@@ -23,13 +23,10 @@ photoWall.directive("photoWall", function(){
         }
       }.bind(this));
     },
-    link:function(scope, element, attrs){
-      console.log("asdf", scope.photoDataStr);
-    }
   };
 });
 
-photoWall.directive("hideOnErr", function() {
+photoWall.directive("pwHideOnErr", function() {
   return {
     restrict: 'A',
     link: function(scope, element, attrs) {
@@ -39,7 +36,7 @@ photoWall.directive("hideOnErr", function() {
     }
   };
 });
-photoWall.directive("fxEnter", function(){
+photoWall.directive("pwFxEnter", function(){
   var isScrolledIntoView = function(el){
     var docViewTop = $(window).scrollTop();
     var docViewBottom = docViewTop + $(window).height();
